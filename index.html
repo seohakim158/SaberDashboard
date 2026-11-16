@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sabre Dashboard Blueprint</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232461D1'/%3E%3Cg transform='translate(5.33 5.33) scale(.889)' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 4L9 15'/%3E%3Cpath d='M6 12l6 6'/%3E%3Cpath d='M6 18l-2 2'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<pattern id="hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="1.6" height="4" class="hf"/></pattern>
+</defs></svg>
+
+<header class="site" id="site">
+  <a class="brand" href="index.html" aria-label="Sabre Dashboard home">
+    <span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4L9 15"/><path d="M6 12l6 6"/><path d="M6 18l-2 2"/></svg></span>
+    <span>Sabre Dashboard</span>
+  </a>
+  <div class="dock" id="dock"></div>
+  <label class="search">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="Find fencer" aria-label="Find fencer" autocomplete="off">
+    <ul class="qlist" id="qlist" hidden></ul>
+  </label>
+</header>
+<div class="wrap" id="rosterview" hidden></div>
+<div class="wrap" id="dash" hidden>
+  <div class="top">
+    <div>
+      <h1 id="pname"></h1>
+      <p id="pclub"></p>
+    </div>
+    <dl class="bio">
+      <div><dt>Age (y m)</dt><dd id="page"></dd></div>
+      <div><dt>Height</dt><dd id="pheight"></dd></div>
+      <div><dt>Rating</dt><dd id="prating"></dd></div>
+    </dl>
+  </div>
+  <div class="navrow" id="navrow">
+  <nav class="tabs" id="tabs" aria-label="Blueprint pages">
+    <button class="t" data-k="overview">Overview</button>
+    <button class="t" data-k="offence">Offence</button>
+    <button class="t" data-k="defence">Defence</button>
+    <button class="t" data-k="raw">Raw data</button>
+    <button class="t" data-k="explain">Explanation</button>
+  </nav>
+    <span class="sp"></span>
+    <div class="ctl" id="ctl">
+      <span>Show</span>
+      <button data-f="all" aria-pressed="true">All</button>
+      <button data-f="Results" aria-pressed="false">Results</button>
+      <button data-f="Timing" aria-pressed="false">Timing</button>
+      <button data-f="Tactics" aria-pressed="false">Tactics</button>
+      <button data-f="Space" aria-pressed="false">Space</button>
+      <button data-f="Opponent" aria-pressed="false">Opponent</button>
+    </div>
+  </div>
+  <main id="view"></main>
+</div>
+
+<!-- the loader picks the fencer from ?f= and loads their data file, then the code that uses it -->
+<script src="fencers.js"></script>
+<script src="roster.js"></script>
+<script src="loader.js"></script>
+</body>
+</html>
