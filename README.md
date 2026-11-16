@@ -6,3 +6,5 @@ Data only includes my (Seoha Kim) data with a dummy player (John Doe).
 Visit the website here - https://seohakim158.github.io/SaberDashboard/
 
 *Please note the website design was done by Claude AI, but the actual analysis and data collection process was done by me (Seoha Kim).*
+
+I've been working on this project since June of 2026, but added my local files onto this repo on 2026/11/16 to better record my progress. 
