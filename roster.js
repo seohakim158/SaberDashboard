@@ -35,7 +35,7 @@ function renderHome(){
       <svg class="blade" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width=".6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4L9 15"/><path d="M6 12l6 6"/><path d="M6 18l-2 2"/></svg>
       <p class="eyebrow">Sabre bout analysis</p>
       <h1>Every touch,<br><em>understood.</em></h1>
-      <p class="lede">Each bout is notated by hand, phrase by phrase, then turned into clear charts on offence, defence, timing, position on the strip and results against different opponents. Find a fencer to open their dashboard: analysis across every bout, with the latest ${BOUT_WINDOW_TEXT} shown one by one.</p>
+      <p class="lede">Each bout is notated by hand, phrase by phrase, then turned into clear charts on offence, defence, timing, position on the strip and results against different opponents. Find a fencer to open their dashboard: analysis across every bout, with the latest ${BOUT_WINDOW_TEXT} shown one by one.<br><br>Try searching a fencer up, like "Seoha Kim" in the field below.</p>
       <label class="bigsearch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
         <input id="hq" type="search" placeholder="Search a fencer by name or club" aria-label="Search fencers" autocomplete="off" autofocus></label>
       <ul class="hits" id="hits" aria-live="polite"></ul>
